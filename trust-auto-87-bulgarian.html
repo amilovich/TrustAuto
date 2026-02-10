@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trust Auto 87 - Професионални услуги за боядисване и реставрация на автомобили. Експертно оцветяване, пълно пребоядисване, точков ремонт и лакиране. Поискайте безплатна оферта днес!">
+    <meta name="keywords" content="боядисване на автомобили, автомобилна боя, реставрация на автомобили, оцветяване, лакиране, точков ремонт, професионално боядисване">
+    <title>Trust Auto 87 - Професионални Услуги за Боядисване и Реставрация на Автомобили</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #c8102e;
+            --secondary-color: #1a1a1a;
+            --accent-color: #f4f4f4;
+            --text-dark: #333;
+            --text-light: #666;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #c8102e 0%, #8b0a1f 100%);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--secondary-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%231a1a1a" width="1200" height="600"/><path fill="%23c8102e" opacity="0.1" d="M0 300L50 325L100 350L150 325L200 300L250 325L300 350L350 325L400 300L450 325L500 350L550 325L600 300L650 325L700 350L750 325L800 300L850 325L900 350L950 325L1000 300L1050 325L1100 350L1150 325L1200 300V600H0Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            padding: 8rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #f4f4f4;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--gradient);
+            color: var(--white);
+            padding: 1rem 3rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(200,16,46,0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(200,16,46,0.5);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+
+        section:nth-child(even) {
+            background: var(--accent-color);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+            color: var(--white);
+        }
+
+        .service-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .service-benefits {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--accent-color);
+        }
+
+        .service-benefits h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .service-benefits ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .service-benefits li {
+            padding: 0.3rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-benefits li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: var(--white);
+            padding: 2rem 1rem 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .placeholder-text {
+            color: var(--text-light);
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .quote-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            opacity: 0.2;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+
+        .testimonial-text {
+            color: var(--text-dark);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            color: var(--secondary-color);
+            margin-bottom: 0.2rem;
+        }
+
+        .stars {
+            color: #ffa500;
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--accent-color);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .contact-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item p {
+            color: var(--text-light);
+        }
+
+        .contact-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            height: 100%;
+            min-height: 400px;
+            background: var(--accent-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--accent-color);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(200,16,46,0.3);
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(200,16,46,0.5);
+        }
+
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .blog-image {
+            height: 200px;
+            background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-date {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .blog-card p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .read-more:hover {
+            gap: 0.8rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+            background: #8b0a1f;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            color: #999;
+        }
+
+        /* Page Sections */
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                flex-direction: column;
+                background: var(--secondary-color);
+                width: 100%;
+                padding: 2rem;
+                transition: left 0.3s;
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .gallery-grid,
+            .testimonials-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo" onclick="showPage('home')">Trust <span>Auto 87</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" onclick="showPage('home')">Начало</a></li>
+                <li><a href="#" onclick="showPage('services')">Услуги</a></li>
+                <li><a href="#" onclick="showPage('about')">За Нас</a></li>
+                <li><a href="#" onclick="showPage('gallery')">Галерия</a></li>
+                <li><a href="#" onclick="showPage('blog')">Блог</a></li>
+                <li><a href="#" onclick="showPage('contact')">Контакти</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page-section active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="fade-in">Trust Auto 87</h1>
+                <p class="tagline fade-in">Професионални Услуги за Боядисване и Реставрация на Автомобили</p>
+                <p class="fade-in">Професионално качество, експертно майсторство и гарантирано удовлетворение на клиентите. Трансформирайте автомобила си с нашите модерни услуги за боядисване.</p>
+                <a href="#" onclick="showPage('contact')" class="cta-button fade-in">Безплатна Оферта</a>
+            </div>
+        </section>
+
+        <!-- About Preview -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Защо да изберете Trust Auto 87?</h2>
+                <p class="section-subtitle">Вашият доверен партньор за професионално боядисване и реставрация</p>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Опит, на който можете да се доверите</h3>
+                        <p>В Trust Auto 87 комбинираме дългогодишен опит с най-съвременни технологии, за да предоставим изключителни услуги за боядисване и реставрация на автомобили. Нашият ангажимент към качество и удовлетворение на клиентите ни отличава в индустрията.</p>
+                        <p>Разбираме, че вашият автомобил е значителна инвестиция, затова третираме всяка работа с максимално внимание и грижа. От малки корекции до цялостно пребоядисване, ние гарантираме безупречни резултати всеки път.</p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">⚡</div>
+                            <div>
+                                <h4>Бърза Изпълнение</h4>
+                                <p>Бърза и ефективна услуга без компромис с качеството</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">💎</div>
+                            <div>
+                                <h4>Първокласни Материали</h4>
+                                <p>Използваме само най-качествени бои и покрития</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">👨‍🔧</div>
+                            <div>
+                                <h4>Експертни Техници</h4>
+                                <p>Квалифицирани специалисти с богат опит</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <h4>Гарантирано Удовлетворение</h4>
+                                <p>Вашето щастие е наш основен приоритет</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Preview -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Нашите Услуги</h2>
+                <p class="section-subtitle">Комплексни решения за боядисване за всяка нужда</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🎨</div>
+                        <h3>Пълно Пребоядисване</h3>
+                        <p>Цялостна трансформация на автомобила с професионално нанасяне на боя и покритие.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>Точков Ремонт</h3>
+                        <p>Прецизни корекции на драскотини, отчупвания и малки повреди без цялостно боядисване.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🌈</div>
+                        <h3>Оцветяване</h3>
+                        <p>Експертна технология за оцветяване, която гарантира перфектни резултати всеки път.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="#" onclick="showPage('services')" class="cta-button">Вижте Всички Услуги</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section>
+            <div class="container">
+                <h2 class="section-title">Какво Казват Нашите Клиенти</h2>
+                <p class="section-subtitle">Доверени от стотици доволни собственици на автомобили</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">"Trust Auto 87 свършиха невероятна работа с колата ми! Боята изглежда фабрично нова и оцветяването беше перфектно. Горещо препоръчвам техните услуги!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">ИП</div>
+                            <div class="author-info">
+                                <h4>Иван Петров</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">"Професионална услуга от началото до края. Поправиха драскотините ми и смесиха боята безупречно. Не може дори да се види къде е било направен ремонтът!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">МГ</div>
+                            <div class="author-info">
+                                <h4>Мария Георгиева</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">"Бързо, достъпно и отлично качество. Trust Auto 87 надминаха очакванията ми. Моят камион изглежда като нов отново!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">СД</div>
+                            <div class="author-info">
+                                <h4>Стефан Димитров</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- SERVICES PAGE -->
+    <div id="services" class="page-section">
+        <section class="hero" style="padding: 4rem 2rem;">
+            <div class="container">
+                <h1>Нашите Услуги</h1>
+                <p>Професионални решения за боядисване и реставрация, съобразени с вашите нужди</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🎨</div>
+                        <h3>Пълно Пребоядисване на Автомобила</h3>
+                        <p>Трансформирайте вашия автомобил с цялостно, професионално боядисване. Нашата услуга включва задълбочена подготовка на повърхността, нанасяне на грунд, множество пластове първокласна автомобилна боя и трайно лакиране.</p>
+                        <div class="service-benefits">
+                            <h4>Защо ви е необходимо:</h4>
+                            <ul>
+                                <li>Възстановяване на избеляла или окислена боя</li>
+                                <li>Пълна промяна на цвета на автомобила</li>
+                                <li>Увеличаване на препродажната стойност</li>
+                                <li>Защита срещу ръжда и вредни фактори</li>
+                            </ul>
+                        </div>
+                        <div class="service-benefits">
+                            <h4>Типични Работи:</h4>
+                            <p>Пълна смяна на цвета, реставрация на класически автомобили, покриване на обширни повреди, пребоядисване на търговски флоти</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>Точков Ремонт и Корекция</h3>
+                        <p>Професионален ремонт на изолирани повредени зони, включително драскотини, отчупвания, вдлъбнатини и малки вдлъбнатини. Безупречно смесваме новата боя с съществуващото покритие за невидими ремонти.</p>
+                        <div class="service-benefits">
+                            <h4>Защо ви е необходимо:</h4>
+                            <ul>
+                                <li>Икономична алтернатива на цялостното боядисване</li>
+                                <li>Бързо време за изпълнение</li>
+                                <li>Предотвратяване на ръжда в повредени зони</li>
+                                <li>Поддържане на вида и стойността на автомобила</li>
+                            </ul>
+                        </div>
+                        <div class="service-benefits">
+                            <h4>Типични Работи:</h4>
+                            <p>Драскотини от паркинг, повреди от количка, драскотини от ключ, отчупвания от камъни, малки ремонти след сблъсък</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🌈</div>
+                        <h3>Професионално Оцветяване</h3>
+                        <p>Използвайки напреднала компютъризирана технология за оцветяване, прецизно съвпадаме с оригиналния цвят на боята на вашия автомобил, отчитайки възрастта и избледняването. Перфектно за ремонти, които трябва да се слеят безупречно.</p>
+                        <div class="service-benefits">
+                            <h4>Защо ви е необходимо:</h4>
+                            <ul>
+                                <li>Осигурява невидими ремонти</li>
+                                <li>Съвпада точно с фабричните кодове на боята</li>
+                                <li>Отчита стареенето и избледняването на боята</li>
+                                <li>Необходимо за частични ремонти на панели</li>
+                            </ul>
+                        </div>
+                        <div class="service-benefits">
+                            <h4>Типични Работи:</h4>
+                            <p>Ремонти на панели, пребоядисване на броня, работа по калници, ремонти на врати, изискващи перфектно смесване на цвета</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">✨</div>
+                        <h3>Лакиране</h3>
+                        <p>Професионално нанасяне на висококачествена защита с лак, която осигурява дълбок, гланцов блясък, докато защитава вашата боя от UV увреждане, драскотини и замърсители от околната среда.</p>
+                        <div class="service-benefits">
+                            <h4>Защо ви е необходимо:</h4>
+                            <ul>
+                                <li>Осигурява UV защита и предотвратява избледняване</li>
+                                <li>Създава дълбок, огледален блясък</li>
+                                <li>Защитава от леки драскотини</li>
+                                <li>Удължава живота на боята</li>
+                            </ul>
+                        </div>
+                        <div class="service-benefits">
+                            <h4>Типични Работи:</h4>
+                            <p>Финализиране на ново боядисване, ремонт на лак, възстановяване на белещ се лак, подобряване на съществуваща боя</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🛡️</div>
+                        <h3>Ремонт и Боядисване на Броня</h3>
+                        <p>Специализирана услуга за ремонт и реставрация на пластмасови брони. Ремонтираме пукнатини, запълваме дълбоки драскотини и пребоядисваме брони според фабричните спецификации с гъвкави бои, проектирани за пластмасови компоненти.</p>
+                        <div class="service-benefits">
+                            <h4>Защо ви е необходимо:</h4>
+                            <ul>
+                                <li>Възстановяване на повредени брони вместо скъпа подмяна</li>
+                                <li>Перфектно съвпадение на боята с купето</li>
+                                <li>Професионален ремонт на пукнатини</li>
+                                <li>Гъвкави покрития, които не се пукат</li>
+                            </ul>
+                        </div>
+                        <div class="service-benefits">
+                            <h4>Типични Работи:</h4>
+                            <p>Повреди от паркиране, малки ремонти след сблъсък, драскотини, пукнатини в бронята</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">⚙️</div>
+                        <h3>Персонализирано Боядисване и Ефекти</h3>
+                        <p>Отличете се с персонализирани бои, включително металик покрития, перлени ефекти, двуцветни дизайни, състезателни ивици и специални цветове. Въплъщаваме вашата визия с експертно нанасяне.</p>
+                        <div class="service-benefits">
+                            <h4>Защо ви е необходимо:</h4>
+                            <ul>
+                                <li>Персонализирайте вашия автомобил</li>
+                                <li>Създайте уникален, привличащ вниманието вид</li>
+                                <li>Професионално нанасяне на специални бои</li>
+                                <li>Покрития с изложбено качество</li>
+                            </ul>
+                        </div>
+                        <div class="service-benefits">
+                            <h4>Типични Работи:</h4>
+                            <p>Персонализирани автомобили, състезателни автомобили, състезателни ивици, акцентни цветове, специални ефекти</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background: var(--accent-color);">
+            <div class="container" style="text-align: center;">
+                <h2 class="section-title">Готови ли сте да трансформирате вашия автомобил?</h2>
+                <p class="section-subtitle">Свържете се с нас днес за безплатна, необвързваща оферта</p>
+                <a href="#" onclick="showPage('contact')" class="cta-button">Получете Безплатна Оферта</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="about" class="page-section">
+        <section class="hero" style="padding: 4rem 2rem;">
+            <div class="container">
+                <h1>За Trust Auto 87</h1>
+                <p>Вашият доверен партньор в автомобилното превъзходство</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Нашата История</h3>
+                        <p>Trust Auto 87 беше основан с проста мисия: да предоставя най-висококачествени услуги за боядисване и реставрация на автомобили, като същевременно изгражда трайни взаимоотношения с нашите клиенти. Това, което започна като малка операция, се превърна в доверено име в общността, известно с изключително майсторство и непоколебим ангажимент към удовлетвореността на клиентите.</p>
+                        <p>През годините сме боядисали хиляди автомобили - от ежедневни превозни средства до класически реставрации и персонализирани проекти. Всеки проект укрепва нашата репутация за качество, надеждност и внимание към детайла.</p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #e0e0e0 0%, #c0c0c0 100%); border-radius: 15px; height: 400px; display: flex; align-items: center; justify-content: center;">
+                        <p class="placeholder-text">Снимка на Работилницата</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background: var(--accent-color);">
+            <div class="container">
+                <h2 class="section-title">Нашата Мисия и Ценности</h2>
+                <div class="services-grid" style="margin-top: 3rem;">
+                    <div class="service-card">
+                        <div class="service-icon">🎯</div>
+                        <h3>Нашата Мисия</h3>
+                        <p>Да предоставяме изключителни услуги за боядисване на автомобили, които надминават очакванията на клиентите чрез експертно майсторство, първокласни материали и персонализирано обслужване. Ангажирани сме да направим всеки автомобил да изглежда възможно най-добре.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">💪</div>
+                        <h3>Качество на Първо Място</h3>
+                        <p>Никога не правим компромис с качеството. От подготовката на повърхността до финалната проверка, всяка стъпка се извършва по най-високи стандарти с първокласни материали и доказани техники.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🤝</div>
+                        <h3>Доверие на Клиентите</h3>
+                        <p>Изграждаме доверие чрез прозрачно ценообразуване, честни оценки и надеждна услуга. Вашето удовлетворение и интегритетът на нашата работа са нашите основни приоритети.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔬</div>
+                        <h3>Иновации</h3>
+                        <p>Следим най-новите технологии, техники и продукти в индустрията за боядисване на автомобили, за да осигурим превъзходни резултати.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⏱️</div>
+                        <h3>Ефективност</h3>
+                        <p>Уважаваме вашето време с ефективни процеси и реалистични срокове, предоставяйки качествена работа без ненужни забавяния.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🌟</div>
+                        <h3>Превъзходство</h3>
+                        <p>Нашият екип е страстен към автомобилното превъзходство. Гордеем се с трансформирането на автомобили и надминаването на очакванията при всяка работа.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="section-title">Защо да изберете нас?</h2>
+                <p class="section-subtitle">Разликата на Trust Auto 87</p>
+                <div class="about-content">
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">👨‍🔧</div>
+                            <div>
+                                <h4>Опитни Техници</h4>
+                                <p>Нашият екип носи години специализиран опит в боядисването и реставрацията на автомобили</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🔬</div>
+                            <div>
+                                <h4>Напреднали Технологии</h4>
+                                <p>Използваме компютъризирано оцветяване и модерно оборудване за боядисване</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">💎</div>
+                            <div>
+                                <h4>Първокласни Материали</h4>
+                                <p>Само най-добри автомобилни бои и материали за трайни резултати</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✅</div>
+                            <div>
+                                <h4>Гарантирани Резултати</h4>
+                                <p>Подкрепяме работата си с цялостни гаранции за услугите</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">💰</div>
+                            <div>
+                                <h4>Справедливи Цени</h4>
+                                <p>Конкурентни тарифи с прозрачни оферти и без скрити такси</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📍</div>
+                            <div>
+                                <h4>Местни и Доверени</h4>
+                                <p>С гордост обслужваме нашата общност с персонализирана услуга</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h3>Запознайте се с Нашия Екип</h3>
+                        <p>В Trust Auto 87 нашият успех се основава на опита и отдадеността на нашите квалифицирани техници. Всеки член на екипа е страстен към автомобилната реставрация и ангажиран с постигането на изключителни резултати.</p>
+                        <p>Нашите техници преминават непрекъснато обучение, за да останат в крак с най-новите техники, продукти и индустриални стандарти. Този ангажимент към професионалното развитие гарантира, че вашият автомобил получава възможно най-добрата грижа с най-съвременни методи.</p>
+                        <p>Когато изберете Trust Auto 87, вие не само получавате боядисване - партнирате със специалисти, които наистина се интересуват от качеството на работата си и вашето удовлетворение.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- GALLERY PAGE -->
+    <div id="gallery" class="page-section">
+        <section class="hero" style="padding: 4rem 2rem;">
+            <div class="container">
+                <h1>Нашата Работа</h1>
+                <p>Вижте качеството и майсторството, което ни отличава</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="section-title">Галерия Преди и След</h2>
+                <p class="section-subtitle">Реални резултати от реални клиенти</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <p class="placeholder-text">Снимка Преди/След 1<br>Проект за Пълно Пребоядисване</p>
+                        <div class="gallery-overlay">
+                            <h3>Пълно Пребоядисване</h3>
+                            <p>Цялостна смяна на цвета с първокласно покритие</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <p class="placeholder-text">Снимка Преди/След 2<br>Точков Ремонт</p>
+                        <div class="gallery-overlay">
+                            <h3>Точков Ремонт и Смесване</h3>
+                            <p>Безупречен ремонт на драскотини и вдлъбнатини</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <p class="placeholder-text">Снимка Преди/След 3<br>Ремонт на Броня</p>
+                        <div class="gallery-overlay">
+                            <h3>Възстановяване на Броня</h3>
+                            <p>Професионален ремонт и реставрация на броня</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <p class="placeholder-text">Снимка Преди/След 4<br>Персонализирано Боядисване</p>
+                        <div class="gallery-overlay">
+                            <h3>Персонализиран Дизайн</h3>
+                            <p>Уникално двуцветно персонализирано покритие</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <p class="placeholder-text">Снимка Преди/След 5<br>Реставрация на Лак</p>
+                        <div class="gallery-overlay">
+                            <h3>Реставрация на Лак</h3>
+                            <p>Възстановен блясък и защита</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <p class="placeholder-text">Снимка Преди/След 6<br>Реставрация на Класически Автомобил</p>
+                        <div class="gallery-overlay">
+                            <h3>Класическа Реставрация</h3>
+                            <p>Боя с изложбено качество</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background: var(--accent-color);">
+            <div class="container" style="text-align: center;">
+                <h2 class="section-title">Готови ли сте да видите как се трансформира вашият автомобил?</h2>
+                <p class="section-subtitle">Нека ви покажем какво можем да направим за вашия автомобил</p>
+                <a href="#" onclick="showPage('contact')" class="cta-button">Поискайте Безплатна Оферта</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- BLOG PAGE -->
+    <div id="blog" class="page-section">
+        <section class="hero" style="padding: 4rem 2rem;">
+            <div class="container">
+                <h1>Съвети за Грижа за Автомобила</h1>
+                <p>Експертни съвети за поддържане на вида на вашия автомобил</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <p class="placeholder-text">Изображение за Блог</p>
+                        </div>
+                        <div class="blog-content">
+                            <p class="blog-date">8 февруари 2026</p>
+                            <h3>Как да Защитите Новата Си Боя</h3>
+                            <p>След инвестиране в професионално боядисване, правилната поддръжка е от съществено значение. Научете най-добрите практики за измиване, нанасяне на восък и защита на свежото покритие на вашия автомобил.</p>
+                            <a href="#" class="read-more">Прочетете Повече →</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <p class="placeholder-text">Изображение за Блог</p>
+                        </div>
+                        <div class="blog-content">
+                            <p class="blog-date">5 февруари 2026</p>
+                            <h3>Разбиране на Типовете Автомобилна Боя</h3>
+                            <p>Не всички автомобилни бои са еднакви. Разгледайте разликите между едностъпалните, базовите/лакови и специалните покрития, за да разберете коя опция е най-добра за вашия автомобил и бюджет.</p>
+                            <a href="#" class="read-more">Прочетете Повече →</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <p class="placeholder-text">Изображение за Блог</p>
+                        </div>
+                        <div class="blog-content">
+                            <p class="blog-date">1 февруари 2026</p>
+                            <h3>Кога да Ремонтирате или Пребоядисате</h3>
+                            <p>Решаването между точков ремонт и пълно пребоядисване може да бъде предизвикателство. Този ръководство ви помага да оцените повредата, да разгледате разходите и да направите правилния избор за конкретната ситуация на вашия автомобил.</p>
+                            <a href="#" class="read-more">Прочетете Повече →</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <p class="placeholder-text">Изображение за Блог</p>
+                        </div>
+                        <div class="blog-content">
+                            <p class="blog-date">28 януари 2026</p>
+                            <h3>Процесът на Оцветяване на Боята</h3>
+                            <p>Чудили ли сте се някога как професионалистите съвпадат точно цвета на вашата боя? Открийте технологията и техниките зад перфектното оцветяване, включително как отчитаме стареенето и избледняването.</p>
+                            <a href="#" class="read-more">Прочетете Повече →</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <p class="placeholder-text">Изображение за Блог</p>
+                        </div>
+                        <div class="blog-content">
+                            <p class="blog-date">24 януари 2026</p>
+                            <h3>Предотвратяване на Повреди на Боята</h3>
+                            <p>Превенцията винаги е по-добра от ремонта. Научете за обичайните причини за повреда на боята, включително UV лъчи, замърсители от околната среда и неправилни техники за измиване, плюс как да ги избегнете.</p>
+                            <a href="#" class="read-more">Прочетете Повече →</a>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <p class="placeholder-text">Изображение за Блог</p>
+                        </div>
+                        <div class="blog-content">
+                            <p class="blog-date">20 януари 2026</p>
+                            <h3>Тенденции в Персонализираната Боя за 2026</h3>
+                            <p>От матови покрития до цветоизменящи се перли, разгледайте най-горещите тенденции в персонализираната боя тази година. Вдъхновете се за следващата трансформация на вашия автомобил с тези иновативни идеи.</p>
+                            <a href="#" class="read-more">Прочетете Повече →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="contact" class="page-section">
+        <section class="hero" style="padding: 4rem 2rem;">
+            <div class="container">
+                <h1>Свържете се с Нас</h1>
+                <p>Тук сме, за да отговорим на вашите въпроси и да предоставим експертни насоки</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="section-title">Свържете се с Trust Auto 87</h2>
+                <p class="section-subtitle">Свържете се за безплатна оферта или за да насрочите услуга</p>
+                
+                <div class="contact-content">
+                    <div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div>
+                                    <h3>Адрес</h3>
+                                    <p>[Вашият Бизнес Адрес]<br>[Град, Област, Пощенски Код]</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📞</div>
+                                <div>
+                                    <h3>Телефон</h3>
+                                    <p><a href="tel:+359123456789">+359 123 456 789</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <div>
+                                    <h3>Имейл</h3>
+                                    <p><a href="mailto:info@trustauto87.bg">info@trustauto87.bg</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">🕒</div>
+                                <div>
+                                    <h3>Работно Време</h3>
+                                    <p>Понеделник - Петък: 8:00 - 18:00<br>
+                                    Събота: 9:00 - 16:00<br>
+                                    Неделя: Почивен ден</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <p class="placeholder-text">Google Карти<br><br>Заменете iframe src с вашия Google Карти URL от вашата бизнес регистрация</p>
+                        <!-- За да добавите вашата карта:
+                        1. Отидете на Google Карти
+                        2. Потърсете вашия бизнес
+                        3. Кликнете "Споделяне" след това "Вграждане на карта"
+                        4. Копирайте iframe кода
+                        5. Заменете заместителя по-долу
+                        
+                        <iframe src="ВАШ_GOOGLE_КАРТИ_EMBED_URL" allowfullscreen="" loading="lazy"></iframe>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background: var(--accent-color);">
+            <div class="container">
+                <h2 class="section-title">Поискайте Безплатна Оферта</h2>
+                <p class="section-subtitle">Попълнете формуляра по-долу и ще се свържем с вас в рамките на 24 часа</p>
+                
+                <div style="max-width: 700px; margin: 0 auto;">
+                    <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Име и Фамилия *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Имейл Адрес *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Телефонен Номер *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="vehicle">Марка и Модел на Автомобила</label>
+                            <input type="text" id="vehicle" name="vehicle" placeholder="напр. 2020 Honda Accord">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Необходима Услуга *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Изберете услуга...</option>
+                                <option value="full-repaint">Пълно Пребоядисване</option>
+                                <option value="spot-repair">Точков Ремонт и Корекция</option>
+                                <option value="color-matching">Оцветяване</option>
+                                <option value="clear-coat">Лакиране</option>
+                                <option value="bumper">Ремонт и Боядисване на Броня</option>
+                                <option value="custom">Персонализирано Боядисване</option>
+                                <option value="other">Друго</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Разкажете ни за вашия проект *</label>
+                            <textarea id="message" name="message" required placeholder="Моля, опишете необходимата работа, повреди или вашите идеи за персонализирана боя..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Изпратете Заявка за Оферта</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Trust Auto 87</h3>
+                    <p>Вашият доверен партньор за професионални услуги за боядисване и реставрация на автомобили. Качествено изпълнение, конкурентни цени и гарантирано удовлетворение на клиентите.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">in</a>
+                        <a href="#" class="social-icon">★</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Бързи Връзки</h3>
+                    <a href="#" onclick="showPage('home')">Начало</a>
+                    <a href="#" onclick="showPage('services')">Услуги</a>
+                    <a href="#" onclick="showPage('about')">За Нас</a>
+                    <a href="#" onclick="showPage('gallery')">Галерия</a>
+                    <a href="#" onclick="showPage('blog')">Блог</a>
+                    <a href="#" onclick="showPage('contact')">Контакти</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Услуги</h3>
+                    <a href="#" onclick="showPage('services')">Пълно Пребоядисване</a>
+                    <a href="#" onclick="showPage('services')">Точков Ремонт</a>
+                    <a href="#" onclick="showPage('services')">Оцветяване</a>
+                    <a href="#" onclick="showPage('services')">Лакиране</a>
+                    <a href="#" onclick="showPage('services')">Ремонт на Броня</a>
+                    <a href="#" onclick="showPage('services')">Персонализирано Боядисване</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Информация за Контакт</h3>
+                    <p>📍 [Вашият Адрес]<br>[Град, Област, Пощенски Код]</p>
+                    <p>📞 <a href="tel:+359123456789">+359 123 456 789</a></p>
+                    <p>✉️ <a href="mailto:info@trustauto87.bg">info@trustauto87.bg</a></p>
+                    <p>🕒 Пон-Пет: 8:00-18:00<br>Съб: 9:00-16:00</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Trust Auto 87. Всички права запазени. | Професионални Услуги за Боядисване и Реставрация на Автомобили</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Page Navigation
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-section');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Close mobile menu if open
+            document.getElementById('navLinks').classList.remove('active');
+            
+            // Scroll to top
+            window.scrollTo({top: 0, behavior: 'smooth'});
+            
+            // Update URL hash without jumping
+            history.pushState(null, null, '#' + pageId);
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Form Submission Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert('Благодарим ви за вашата заявка за оферта! Ще се свържем с вас в рамките на 24 часа.\n\nЗабележка: Това е демонстрационна форма. В продукция това ще изпрати вашата информация до Trust Auto 87.');
+            event.target.reset();
+        }
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', function() {
+            const hash = window.location.hash.substring(1) || 'home';
+            showPage(hash);
+        });
+
+        // Check for URL hash on load
+        window.addEventListener('load', function() {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                showPage(hash);
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.getElementById('navLinks');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!nav.contains(event.target) && !menuBtn.contains(event.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
